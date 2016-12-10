@@ -1,0 +1,15 @@
+<ActionBar title="sample App with RadSideDrawer">
+    <NavigationButton icon="res://menu" text="Go Back" (tap)="openDrawer()"></NavigationButton>
+</ActionBar>
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+     <StackLayout tkDrawerContent class="bgc-white">
+        <Button text="PageMain" (tap)="goto('')" class="btn btn-primary btn-active"></Button>
+        <Button text="Page1" (tap)="goto('page1')" class="btn btn-primary btn-active"></Button>
+        <Button text="Page2" (tap)="goto('page2')" class="btn btn-primary btn-active"></Button>
+    </StackLayout>
+    <StackLayout tkMainContent>
+          <Label [text]='title'></Label>
+          <router-outlet> </router-outlet>
+          <!--page-router-outlet> </page-router-outlet-->
+    </StackLayout>
+</RadSideDrawer>
